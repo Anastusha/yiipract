@@ -61,7 +61,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $date = date("d:m:Y");
+        return $this->render('index', ['date' => $date]);
     }
 
     /**
