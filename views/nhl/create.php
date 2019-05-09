@@ -1,9 +1,20 @@
 <?php
-/* @var $this yii\web\View */
-?>
-<h1>nhl/create</h1>
 
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+use yii\helpers\Html;
+
+/* @var $this yii\web\View */
+/* @var $model app\models\Nhl */
+
+$this->title = 'Create Nhl';
+$this->params['breadcrumbs'][] = ['label' => 'Nhls', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="nhl-create">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <?= $this->render('_form', [
+        'model' => $model,
+    ]) ?>
+
+</div>
